@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8002
 
 spring:
   application:
@@ -10,7 +10,7 @@ spring:
     url: jdbc:mysql://localhost:3306/myworkspace?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: bkl951753
-  #datasource:
+    #datasource:
     #driver-class-name: oracle.jdbc.driver.OracleDriver
     #url: jdbc:oracle:thin:@10.41.21.42:1521:RF
     #username: gsdctrain
@@ -20,17 +20,17 @@ eureka:
     register-with-eureka: true     #false表示不向注册中心注册自己。
     fetch-registry: true     #false表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
     service-url:
-    #集群指向其它eureka
-    #defaultZone: http://eureka7002.com:7002/eureka/
-    #单机就是7001自己
+      #集群指向其它eureka
+      #defaultZone: http://eureka7002.com:7002/eureka/
+      #单机就是7001自己
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
   instance:
     #Eureka客户端向服务端发送心跳的时间间隔，单位为秒(默认是30秒)
-      lease-renewal-interval-in-seconds: 1
+    lease-renewal-interval-in-seconds: 1
     #Eureka服务端在收到最后一次心跳后等待时间上限，单位为秒(默认是90秒)，超时将剔除服务
-      lease-expiration-duration-in-seconds: 2
-
-    #instance-id: payment8001
+    lease-expiration-duration-in-seconds: 2
+  #instance:
+    #instance-id: payment8002
     #prefer-ip-address: true
 mybatis:
   mapperLocations: classpath:mapper/*.xml

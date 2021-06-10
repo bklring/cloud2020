@@ -11,5 +11,5 @@ eureka:
       defaultZone: http://eureka7002.com:7002/eureka/
   server:   #关闭自我保护机制，保证不可用服务被及时踢除
     #enable-self-preservation: false
-    # 去除失效服务的时间间隔（毫秒）
+    # 去除失效服务的时间间隔（毫秒），默认是60s
     eviction-interval-timer-in-ms:  1000

@@ -9,10 +9,11 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
+        group: DEV_GROUP
+        namespace: 53248ecd-7bb7-49df-afb4-5e83f1b72fe4
 
 
 #消费者将要去访问的微服务名称(注册成功进nacos的微服务提供者)
 service-url:
   nacos-user-service: http://nacos-payment-provider
-
 

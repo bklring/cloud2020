@@ -8,6 +8,8 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848 #配置Nacos地址
+        group: DEV_GROUP
+        namespace: 53248ecd-7bb7-49df-afb4-5e83f1b72fe4
 
 management:
   endpoints:
